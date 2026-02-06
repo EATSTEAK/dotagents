@@ -1,0 +1,15 @@
+# 글로벌 gitignore 오버라이드
+!.roo/
+
+# 민감 정보 (API 키, 토큰)
+.claude/settings.json
+
+# OS
+.DS_Store
+
+# 백업
+.backups/
+
+# 에디터
+*.swp
+*~

@@ -1,7 +1,13 @@
 ---
 name: evaluate-instructions
-description: "이 스킬은 사용자가 에이전트 설정 파일을 '평가', '분석', '개선', '점검'하고 싶을 때 사용합니다. AGENTS.md, CLAUDE.md, .cursorrules, .cursor/rules/*.mdc, .github/copilot-instructions.md 등 에이전트 instructions 파일의 품질을 20편의 ArXiv 논문 기반 기준으로 평가합니다. 'evaluate agents', 'agent instructions 평가', 'AGENTS.md 리뷰', 'instructions 품질 체크' 등의 요청에 활성화됩니다."
-argument-hint: "[파일경로] (미지정시 자동 탐색)"
+description: >-
+  이 스킬은 사용자가 에이전트 설정 파일을 '평가', '분석', '개선', '점검'하고 싶을 때 사용합니다. AGENTS.md,
+  CLAUDE.md, .cursorrules, .cursor/rules/*.mdc, .github/copilot-instructions.md
+  등 에이전트 instructions 파일의 품질을 20편의 ArXiv 논문 기반 기준으로 평가합니다. 'evaluate agents',
+  'agent instructions 평가', 'AGENTS.md 리뷰', 'instructions 품질 체크' 등의 요청에 활성화됩니다.
+argument-hint: '[파일경로] (미지정시 자동 탐색)'
+modeSlugs:
+  - code
 ---
 
 # Agent Instructions 평가 스킬

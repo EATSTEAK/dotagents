@@ -9,6 +9,7 @@ LINKS=(
   "$HOME/.claude/commands|$AGENTS_DIR/commands"
   "$HOME/.roo/commands|$AGENTS_DIR/commands"
   "$HOME/.roo/skills|$AGENTS_DIR/skills"
+  "$HOME/.claude/skills|$AGENTS_DIR/skills"
   "$HOME/.claude/settings.json|$AGENTS_DIR/.claude/settings.json"
   "$HOME/.roo/rules|$AGENTS_DIR/.roo/rules"
 )

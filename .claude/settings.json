@@ -9,6 +9,11 @@
     "rust-analyzer-lsp@claude-plugins-official": true
   },
   "language": "Korean",
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "ANTHROPIC_BASE_URL": "http://localhost:8317",
+    "ANTHROPIC_AUTH_TOKEN": "claude-code"
+  },
   "mcpServers": {
     "context7": {
       "command": "pnpx",

@@ -73,4 +73,37 @@ for entry in "${LINKS[@]}"; do
 done
 
 echo ""
+
+# claude 실행 시에만 .env 를 로딩하는 shell function 등록
+ENV_FILE="$AGENTS_DIR/.env"
+SHELL_RC="$HOME/.zshrc"
+[ -n "${BASH_VERSION:-}" ] && SHELL_RC="$HOME/.bashrc"
+
+FUNC_MARKER="# ~/.agents claude wrapper"
+
+echo "=== claude wrapper function 설정 ==="
+if [ -f "$ENV_FILE" ]; then
+  if ! grep -qF "$FUNC_MARKER" "$SHELL_RC" 2>/dev/null; then
+    cat >> "$SHELL_RC" << 'WRAPPER'
+
+# ~/.agents claude wrapper
+claude() {
+  (
+    set -a
+    source "$HOME/.agents/.env"
+    set +a
+    command claude "$@"
+  )
+}
+WRAPPER
+    echo "  [추가] $SHELL_RC 에 claude wrapper function 추가됨"
+  else
+    echo "  [스킵] $SHELL_RC 에 이미 claude wrapper 있음"
+  fi
+else
+  echo "  [경고] .env 파일이 없습니다: $ENV_FILE"
+  echo "  .env.example 을 참고하여 .env 파일을 생성하세요."
+fi
+
+echo ""
 echo "=== 완료 ==="

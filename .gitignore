@@ -2,7 +2,7 @@
 !.roo/
 
 # 민감 정보 (API 키, 토큰)
-.claude/settings.json
+.env
 
 # OS
 .DS_Store

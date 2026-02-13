@@ -1,0 +1,90 @@
+{
+  "permissions": {
+    "allow": ["Bash(cargo fmt:*)", "Bash(cargo clippy:*)"]
+  },
+  "enabledPlugins": {
+    "ralph-loop@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "rust-analyzer-lsp@claude-plugins-official": true
+  },
+  "language": "Korean",
+  "mcpServers": {
+    "context7": {
+      "command": "pnpx",
+      "args": ["@upstash/context7-mcp"],
+      "alwaysAllow": ["resolve-library-id", "get-library-docs", "query-docs"]
+    },
+    "serena": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena-mcp-server"
+      ],
+      "alwaysAllow": [
+        "initial_instructions",
+        "check_onboarding_performed",
+        "activate_project",
+        "find_file",
+        "find_symbol",
+        "list_dir",
+        "search_for_pattern",
+        "read_file",
+        "replace_content",
+        "list_memories",
+        "think_about_whether_you_are_done"
+      ],
+      "disabled": false
+    },
+    "kubernetes": {
+      "command": "pnpx",
+      "args": ["mcp-server-kubernetes"],
+      "disabled": true,
+      "alwaysAllow": []
+    },
+    "sequentialthinking": {
+      "command": "pnpx",
+      "args": ["@modelcontextprotocol/server-sequential-thinking"],
+      "alwaysAllow": ["sequentialthinking"]
+    },
+    "slack": {
+      "command": "pnpx",
+      "args": ["slack-mcp-server@latest", "--transport", "stdio"],
+      "alwaysAllow": ["conversations_search_messages"],
+      "disabled": true
+    },
+    "g-search": {
+      "command": "pnpx",
+      "args": ["g-search-mcp"],
+      "alwaysAllow": ["search"],
+      "disabledTools": [],
+      "disabled": false
+    },
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "-e",
+        "GITHUB_TOOLSETS",
+        "-e",
+        "GITHUB_READ_ONLY",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_TOOLSETS": "",
+        "GITHUB_READ_ONLY": ""
+      },
+      "alwaysAllow": [
+        "get_file_contents",
+        "list_commits",
+        "get_me",
+        "list_pull_requests"
+      ]
+    }
+  }
+}

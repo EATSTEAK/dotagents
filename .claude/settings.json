@@ -10,9 +10,7 @@
   },
   "language": "Korean",
   "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
-    "ANTHROPIC_BASE_URL": "http://localhost:8317",
-    "ANTHROPIC_AUTH_TOKEN": "claude-code"
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
   "mcpServers": {
     "context7": {
@@ -67,23 +65,8 @@
       "disabled": false
     },
     "github": {
-      "command": "docker",
-      "args": [
-        "run",
-        "-i",
-        "--rm",
-        "-e",
-        "GITHUB_PERSONAL_ACCESS_TOKEN",
-        "-e",
-        "GITHUB_TOOLSETS",
-        "-e",
-        "GITHUB_READ_ONLY",
-        "ghcr.io/github/github-mcp-server"
-      ],
-      "env": {
-        "GITHUB_TOOLSETS": "",
-        "GITHUB_READ_ONLY": ""
-      },
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/",
       "alwaysAllow": [
         "get_file_contents",
         "list_commits",

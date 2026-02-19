@@ -106,4 +106,21 @@ else
 fi
 
 echo ""
+
+# MCP 서버 동기화
+echo "=== MCP 서버 동기화 ==="
+MCP_SCRIPT="$AGENTS_DIR/scripts/reconcile-mcp.sh"
+if [ -f "$MCP_SCRIPT" ] && [ -f "$AGENTS_DIR/.mcp.json" ]; then
+  read -rp "  .mcp.json 기반으로 Claude Code MCP 서버를 동기화할까요? (Y/n) " answer
+  answer="${answer:-Y}"
+  if [[ "$answer" =~ ^[Yy]$ ]]; then
+    bash "$MCP_SCRIPT"
+  else
+    echo "  [스킵] MCP 동기화를 건너뜁니다."
+  fi
+else
+  echo "  [스킵] reconcile-mcp.sh 또는 .mcp.json 이 없습니다."
+fi
+
+echo ""
 echo "=== 완료 ==="

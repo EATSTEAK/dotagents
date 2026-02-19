@@ -15,8 +15,7 @@
   "mcpServers": {
     "context7": {
       "command": "pnpx",
-      "args": ["@upstash/context7-mcp"],
-      "alwaysAllow": ["resolve-library-id", "get-library-docs", "query-docs"]
+      "args": ["@upstash/context7-mcp"]
     },
     "serena": {
       "command": "uvx",
@@ -24,55 +23,27 @@
         "--from",
         "git+https://github.com/oraios/serena",
         "serena-mcp-server"
-      ],
-      "alwaysAllow": [
-        "initial_instructions",
-        "check_onboarding_performed",
-        "activate_project",
-        "find_file",
-        "find_symbol",
-        "list_dir",
-        "search_for_pattern",
-        "read_file",
-        "replace_content",
-        "list_memories",
-        "think_about_whether_you_are_done"
-      ],
-      "disabled": false
+      ]
     },
     "kubernetes": {
       "command": "pnpx",
-      "args": ["mcp-server-kubernetes"],
-      "disabled": true,
-      "alwaysAllow": []
+      "args": ["mcp-server-kubernetes"]
     },
     "sequentialthinking": {
       "command": "pnpx",
-      "args": ["@modelcontextprotocol/server-sequential-thinking"],
-      "alwaysAllow": ["sequentialthinking"]
+      "args": ["@modelcontextprotocol/server-sequential-thinking"]
     },
     "slack": {
       "command": "pnpx",
-      "args": ["slack-mcp-server@latest", "--transport", "stdio"],
-      "alwaysAllow": ["conversations_search_messages"],
-      "disabled": true
+      "args": ["slack-mcp-server@latest", "--transport", "stdio"]
     },
     "g-search": {
       "command": "pnpx",
-      "args": ["g-search-mcp"],
-      "alwaysAllow": ["search"],
-      "disabledTools": [],
-      "disabled": false
+      "args": ["g-search-mcp"]
     },
     "github": {
       "type": "http",
-      "url": "https://api.githubcopilot.com/mcp/",
-      "alwaysAllow": [
-        "get_file_contents",
-        "list_commits",
-        "get_me",
-        "list_pull_requests"
-      ]
+      "url": "https://api.githubcopilot.com/mcp/"
     }
   }
 }

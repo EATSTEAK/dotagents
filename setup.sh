@@ -11,6 +11,7 @@ LINKS=(
   "$HOME/.roo/skills|$AGENTS_DIR/skills"
   "$HOME/.claude/skills|$AGENTS_DIR/skills"
   "$HOME/.claude/settings.json|$AGENTS_DIR/.claude/settings.json"
+  "$HOME/.claude/statusline-command.sh|$AGENTS_DIR/.claude/statusline-command.sh"
   "$HOME/.roo/rules|$AGENTS_DIR/.roo/rules"
 )
 
@@ -68,7 +69,7 @@ echo "=== ~/.agents 심볼릭 링크 설정 ==="
 echo ""
 
 for entry in "${LINKS[@]}"; do
-  IFS='|' read -r link_path target <<< "$entry"
+  IFS='|' read -r link_path target <<<"$entry"
   create_link "$link_path" "$target"
 done
 
@@ -77,14 +78,13 @@ echo ""
 # claude 실행 시에만 .env 를 로딩하는 shell function 등록
 ENV_FILE="$AGENTS_DIR/.env"
 SHELL_RC="$HOME/.zshrc"
-[ -n "${BASH_VERSION:-}" ] && SHELL_RC="$HOME/.bashrc"
 
 FUNC_MARKER="# ~/.agents claude wrapper"
 
 echo "=== claude wrapper function 설정 ==="
 if [ -f "$ENV_FILE" ]; then
   if ! grep -qF "$FUNC_MARKER" "$SHELL_RC" 2>/dev/null; then
-    cat >> "$SHELL_RC" << 'WRAPPER'
+    cat >>"$SHELL_RC" <<'WRAPPER'
 
 # ~/.agents claude wrapper
 claude() {

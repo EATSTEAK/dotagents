@@ -1,10 +1,21 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "env": {
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "permissions": {
     "allow": [
       "Bash(cargo fmt:*)",
       "Bash(cargo clippy:*)"
     ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "bash /Users/hyomin/.claude/statusline-command.sh"
   },
   "enabledPlugins": {
     "ralph-loop@claude-plugins-official": true,
@@ -13,62 +24,9 @@
     "rust-analyzer-lsp@claude-plugins-official": true
   },
   "language": "Korean",
-  "env": {
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
-  },
-  "attribution": {
-    "commit": "",
-    "pr": ""
-  },
   "sandbox": {
     "enabled": true,
     "autoAllowBashIfSandboxed": true
   },
-  "plansDirectory": "./plans",
-  "mcpServers": {
-    "context7": {
-      "command": "pnpx",
-      "args": [
-        "@upstash/context7-mcp"
-      ]
-    },
-    "serena": {
-      "command": "uvx",
-      "args": [
-        "--from",
-        "git+https://github.com/oraios/serena",
-        "serena-mcp-server"
-      ]
-    },
-    "kubernetes": {
-      "command": "pnpx",
-      "args": [
-        "mcp-server-kubernetes"
-      ]
-    },
-    "sequentialthinking": {
-      "command": "pnpx",
-      "args": [
-        "@modelcontextprotocol/server-sequential-thinking"
-      ]
-    },
-    "slack": {
-      "command": "pnpx",
-      "args": [
-        "slack-mcp-server@latest",
-        "--transport",
-        "stdio"
-      ]
-    },
-    "g-search": {
-      "command": "pnpx",
-      "args": [
-        "g-search-mcp"
-      ]
-    },
-    "github": {
-      "type": "http",
-      "url": "https://api.githubcopilot.com/mcp/"
-    }
-  }
+  "plansDirectory": "./plans"
 }

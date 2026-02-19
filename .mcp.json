@@ -1,0 +1,36 @@
+{
+  "mcpServers": {
+    "context7": {
+      "command": "pnpx",
+      "args": ["@upstash/context7-mcp"]
+    },
+    "serena": {
+      "command": "uvx",
+      "args": [
+        "--from",
+        "git+https://github.com/oraios/serena",
+        "serena-mcp-server"
+      ]
+    },
+    "kubernetes": {
+      "command": "pnpx",
+      "args": ["mcp-server-kubernetes"]
+    },
+    "sequentialthinking": {
+      "command": "pnpx",
+      "args": ["@modelcontextprotocol/server-sequential-thinking"]
+    },
+    "slack": {
+      "command": "pnpx",
+      "args": ["slack-mcp-server@latest", "--transport", "stdio"]
+    },
+    "g-search": {
+      "command": "pnpx",
+      "args": ["g-search-mcp"]
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp/"
+    }
+  }
+}

@@ -38,6 +38,10 @@
       "headers": {
         "Authorization": "Bearer ${GITHUB_PERSONAL_ACCESS_TOKEN}"
       }
+    },
+    "arxiv-mcp": {
+      "command": "uvx",
+      "args": ["arxiv-mcp-server", "--storage-path", "~/.arxiv"]
     }
   }
 }

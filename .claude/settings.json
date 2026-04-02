@@ -6,7 +6,8 @@
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "gpt-5.4",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-5.1",
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gpt-5.4-mini",
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
+    "CLAUDE_CODE_NO_FLICKER": "1"
   },
   "attribution": {
     "commit": "",
@@ -36,13 +37,10 @@
         "/Users/koohyomin/.agents/.claude/.pnpm-store/v10",
         "/Users/koohyomin/.cache/uv"
       ],
-      "allowRead": [
-        "/Users/koohyomin/.gnupg"
-      ]
+      "allowRead": ["/Users/koohyomin/.gnupg"]
     }
   },
   "effortLevel": "medium",
   "plansDirectory": "./plans",
   "teammateMode": "tmux"
 }
-

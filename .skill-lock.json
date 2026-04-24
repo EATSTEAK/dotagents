@@ -144,6 +144,42 @@
       "skillFolderHash": "2a1ad17028306ebe45f0e49703fa28b9b2e7f499",
       "installedAt": "2026-03-28T14:25:55.233Z",
       "updatedAt": "2026-03-28T14:25:55.233Z"
+    },
+    "research-first": {
+      "source": "eatsteak/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/eatsteak/skills.git",
+      "skillPath": "skills/research-first/SKILL.md",
+      "skillFolderHash": "8e37a009c7df306d3a9f78785491d4c5bb2f737a",
+      "installedAt": "2026-04-03T03:50:41.017Z",
+      "updatedAt": "2026-04-21T05:05:51.149Z"
+    },
+    "orchestrator": {
+      "source": "eatsteak/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/eatsteak/skills.git",
+      "skillPath": "skills/orchestrator/SKILL.md",
+      "skillFolderHash": "c699f7f0ee9dffc00bd5df8068042f53d101c5f6",
+      "installedAt": "2026-04-21T05:05:50.717Z",
+      "updatedAt": "2026-04-21T05:05:50.717Z"
+    },
+    "setup-rust": {
+      "source": "eatsteak/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/eatsteak/skills.git",
+      "skillPath": ".claude/skills/setup-rust/SKILL.md",
+      "skillFolderHash": "0cf88caa9187f91e530032b5a08d35509f471aed",
+      "installedAt": "2026-04-21T05:05:51.635Z",
+      "updatedAt": "2026-04-21T05:05:51.635Z"
+    },
+    "use-uv": {
+      "source": "eatsteak/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/eatsteak/skills.git",
+      "skillPath": "skills/use-uv/SKILL.md",
+      "skillFolderHash": "9067cac81497afec99f5d64f01c7673fb97a5b6c",
+      "installedAt": "2026-04-21T05:05:52.159Z",
+      "updatedAt": "2026-04-21T05:05:52.159Z"
     }
   },
   "dismissed": {
@@ -156,6 +192,7 @@
     "codex",
     "cursor",
     "deepagents",
+    "firebender",
     "gemini-cli",
     "github-copilot",
     "kimi-cli",

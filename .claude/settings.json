@@ -3,7 +3,7 @@
   "env": {
     "ANTHROPIC_BASE_URL": "http://localhost:8317",
     "ANTHROPIC_AUTH_TOKEN": "claude-code",
-    "ANTHROPIC_DEFAULT_OPUS_MODEL": "gpt-5.4",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "gpt-5.5",
     "ANTHROPIC_DEFAULT_SONNET_MODEL": "glm-5.1",
     "ANTHROPIC_DEFAULT_HAIKU_MODEL": "gpt-5.4-mini",
     "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1",
@@ -25,12 +25,12 @@
     "ralph-loop@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
-    "rust-analyzer-lsp@claude-plugins-official": true
+    "rust-analyzer-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true
   },
   "language": "Korean",
   "sandbox": {
     "enabled": true,
-    "enableWeakerNetworkIsolation": true,
     "autoAllowBashIfSandboxed": true,
     "filesystem": {
       "allowWrite": [
@@ -38,9 +38,10 @@
         "/Users/koohyomin/.cache/uv"
       ],
       "allowRead": ["/Users/koohyomin/.gnupg"]
-    }
+    },
+    "enableWeakerNetworkIsolation": true
   },
-  "effortLevel": "medium",
+  "effortLevel": "high",
   "plansDirectory": "./plans",
   "teammateMode": "tmux"
 }

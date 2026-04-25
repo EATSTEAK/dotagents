@@ -7,7 +7,7 @@ argument-hint: "[branch|staged|file] [추가 인자]"
 
 ## 리뷰 대상 설정
 
-- 리뷰 대상: `$ARGS`
+- 리뷰 대상: `$ARGUMENTS`
 - 인자가 없으면 `branch`를 사용
 - 지원 형식:
   - `/review` 또는 `/review branch` → 현재 브랜치 diff 리뷰
@@ -20,7 +20,7 @@ argument-hint: "[branch|staged|file] [추가 인자]"
 
 1. **리뷰 대상 해석**
 
-   - `$ARGS`가 비어 있으면 `branch`로 간주
+   - `$ARGUMENTS`가 비어 있으면 `branch`로 간주
    - 첫 번째 인자가 `branch`, `staged`, `file` 중 무엇인지 확인
    - `file`인데 파일 경로가 없으면 사용자에게 경로를 다시 요청
    - 지정되지 않은 값이면 지원 형식을 안내하고 다시 확인

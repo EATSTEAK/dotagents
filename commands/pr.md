@@ -6,7 +6,7 @@ description: "/summary 명령어를 실행하고 그 결과를 기반으로 GitH
 
 ## 기준 브랜치 설정
 
-- 기준 브랜치: `$ARGS` (인자가 없으면 `main` 사용)
+- 기준 브랜치: `$ARGUMENTS` (인자가 없으면 `main` 사용)
 - 예시: `/pr` → main 브랜치 기준, `/pr dev` → dev 브랜치 기준
 
 ## 작업 순서
@@ -14,7 +14,7 @@ description: "/summary 명령어를 실행하고 그 결과를 기반으로 GitH
 1. **현재 브랜치 정보 확인**
 
    - `git branch --show-current` 명령으로 현재 브랜치 이름 확인
-   - 기준 브랜치가 지정되지 않았으면 `main`을, 지정되었으면 해당 브랜치(`$ARGS`)를 사용
+   - 기준 브랜치가 지정되지 않았으면 `main`을, 지정되었으면 해당 브랜치(`$ARGUMENTS`)를 사용
    - `git log origin/<기준브랜치>..HEAD --oneline` 명령으로 기준 브랜치 대비 커밋 목록 확인
 
 2. **변경된 파일 목록 확인**

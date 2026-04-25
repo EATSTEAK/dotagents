@@ -1,19 +1,16 @@
 # .agents
 
-> AI 코딩 에이전트(Roo Code, Claude Code, OpenCode)의 설정, 커맨드, 스킬, 규칙을 **단일 저장소**에서 중앙 관리하는 dotfiles 스타일 설정 프레임워크
+> AI 코딩 에이전트(Roo Code, Claude Code, OpenCode)의 설정, 스킬, 규칙을 **단일 저장소**에서 중앙 관리하는 dotfiles 스타일 설정 프레임워크
 
 ## 왜 필요한가?
 
 Roo Code, Claude Code, OpenCode는 각각 `~/.roo/`, `~/.claude/`, `~/.config/opencode/` 등 서로 다른 경로에 설정을 저장합니다.
-에이전트가 늘어날수록 **동일한 커맨드·스킬·규칙을 여러 곳에 복사**해야 하는 문제가 생깁니다.
+에이전트가 늘어날수록 **동일한 스킬·규칙을 여러 곳에 복사**해야 하는 문제가 생깁니다.
 
 `.agents`는 심볼릭 링크를 통해 하나의 Git 저장소에서 모든 에이전트 설정을 관리합니다.
 
 ```
 ~/.agents (이 저장소)
-  ├── commands/     ─── symlink ──→  ~/.claude/commands/
-  │                 ─── symlink ──→  ~/.roo/commands/
-  │                 ─── symlink ──→  ~/.config/opencode/commands/
   ├── skills/       ─── symlink ──→  ~/.claude/skills/
   │                 ─── symlink ──→  ~/.roo/skills/
   │                 ─── symlink ──→  ~/.config/opencode/skills/
@@ -46,9 +43,6 @@ git clone <repo-url> ~/.agents
 ### 설정 확인
 
 ```bash
-ls -la ~/.claude/commands   # → ~/.agents/commands
-ls -la ~/.roo/commands      # → ~/.agents/commands
-ls -la ~/.config/opencode/commands # → ~/.agents/commands
 ls -la ~/.roo/skills        # → ~/.agents/skills
 ls -la ~/.config/opencode/skills   # → ~/.agents/skills
 ls -la ~/.hermes/config.yaml # → ~/.agents/hermes/config.yaml
@@ -59,17 +53,14 @@ ls -la ~/.hermes/config.yaml # → ~/.agents/hermes/config.yaml
 ```
 .agents/
 ├── setup.sh                          # 심볼릭 링크 설정 스크립트
-├── commands/                         # 슬래시 커맨드 (Roo Code · Claude Code · OpenCode 공유)
-│   ├── commit.md                     #   /commit - 스마트 커밋 분할
-│   ├── pr.md                         #   /pr - GitHub PR 자동 생성
-│   ├── review.md                     #   /review - 코드 리뷰 수행
-│   ├── summary.md                    #   /summary - 변경사항 요약
-│   ├── rearrange.md                  #   /rearrange - 커밋 재정렬
-│   └── pdftomd.md                    #   /pdftomd - PDF→Markdown 변환
 ├── skills/                           # 에이전트 스킬
+│   ├── commit/                       #   staged 변경사항 스마트 커밋
+│   ├── pr/                           #   GitHub PR 생성
+│   ├── review/                       #   코드 리뷰 수행
+│   ├── summary/                      #   변경사항 요약
+│   ├── rearrange/                    #   커밋 재정렬
+│   ├── pdftomd/                      #   PDF→Markdown 변환
 │   └── evaluate-instructions/        #   에이전트 설정 파일 품질 평가
-│       ├── SKILL.md                  #     스킬 정의 및 평가 루브릭
-│       └── IMPROVE.md                #     자기 개선 가이드
 ├── .claude/                          # Claude Code 설정
 │   ├── settings.json                 #   MCP 서버, 플러그인, 권한 설정
 │   └── settings.local.json           #   로컬 전용 권한 설정
@@ -84,22 +75,20 @@ ls -la ~/.hermes/config.yaml # → ~/.agents/hermes/config.yaml
 └── .gitignore
 ```
 
-## 커맨드
-
-`commands/` 디렉토리의 마크다운 파일은 에이전트 내에서 `/명령어` 형태로 호출됩니다. OpenCode는 `~/.config/opencode/commands/` 링크를 통해 같은 파일을 전역 커맨드로 읽습니다.
-
-| 커맨드       | 설명                                                    | 사용법                              |
-| ------------ | ------------------------------------------------------- | ----------------------------------- |
-| `/commit`    | staging된 변경사항을 분석하여 논리적 단위로 나누어 커밋 | `/commit` 또는 `/commit --single`   |
-| `/pr`        | 변경사항을 요약하고 GitHub PR 자동 생성                 | `/pr` 또는 `/pr dev`                |
-| `/review`    | 현재 브랜치의 변경사항을 다각도로 코드 리뷰             | `/review`                           |
-| `/summary`   | 브랜치 변경사항 분석 및 요약 생성                       | `/summary` 또는 `/summary dev`      |
-| `/rearrange` | 커밋들을 리뷰하기 쉽게 재정렬·분할·병합                 | `/rearrange` 또는 `/rearrange main` |
-| `/pdftomd`   | PDF 파일을 구조를 유지하며 마크다운으로 변환            | `/pdftomd <파일경로>`               |
-
 ## 스킬
 
 `skills/` 디렉토리에는 특정 조건에서 자동 활성화되는 에이전트 스킬이 포함됩니다. OpenCode는 `~/.config/opencode/skills/` 링크와 `~/.agents/skills` 경로 설정을 통해 같은 스킬을 읽습니다.
+
+커맨드로 관리하던 워크플로우는 `pnpx skills` CLI로 설치되는 스킬로 전환되었습니다.
+
+| 스킬        | 설명                                                    |
+| ----------- | ------------------------------------------------------- |
+| `commit`    | staged 변경사항을 분석하여 논리적 단위로 나누어 커밋    |
+| `pr`        | 변경사항을 요약하고 GitHub PR 생성                      |
+| `review`    | 브랜치 diff, staged diff, 특정 파일 코드 리뷰           |
+| `summary`   | 브랜치 변경사항 분석 및 요약 생성                       |
+| `rearrange` | 커밋들을 리뷰하기 쉽게 재정렬·분할·병합                 |
+| `pdftomd`   | PDF 파일을 구조를 유지하며 마크다운으로 변환            |
 
 ### evaluate-instructions
 
@@ -131,9 +120,6 @@ ls -la ~/.hermes/config.yaml # → ~/.agents/hermes/config.yaml
 
 | 링크 경로                              | 대상                                          |
 | -------------------------------------- | --------------------------------------------- |
-| `~/.claude/commands`                   | `~/.agents/commands`                          |
-| `~/.roo/commands`                      | `~/.agents/commands`                          |
-| `~/.config/opencode/commands`          | `~/.agents/commands`                          |
 | `~/.roo/skills`                        | `~/.agents/skills`                            |
 | `~/.claude/skills`                     | `~/.agents/skills`                            |
 | `~/.config/opencode/skills`            | `~/.agents/skills`                            |
@@ -144,21 +130,6 @@ ls -la ~/.hermes/config.yaml # → ~/.agents/hermes/config.yaml
 | `~/.hermes/config.yaml`                | `~/.agents/hermes/config.yaml`                |
 
 ## 커스터마이징
-
-### 커맨드 추가
-
-`commands/` 디렉토리에 마크다운 파일을 추가하면 Claude Code, Roo Code, OpenCode에서 바로 사용 가능합니다:
-
-```markdown
----
-description: "커맨드 설명"
-argument-hint: "[인자] (설명)"
----
-
-# 커맨드 제목
-
-커맨드 지시사항...
-```
 
 ### 스킬 추가
 

@@ -180,6 +180,60 @@
       "skillFolderHash": "9067cac81497afec99f5d64f01c7673fb97a5b6c",
       "installedAt": "2026-04-21T05:05:52.159Z",
       "updatedAt": "2026-04-21T05:05:52.159Z"
+    },
+    "commit": {
+      "source": "EATSTEAK/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/EATSTEAK/skills.git",
+      "skillPath": "skills/commit/SKILL.md",
+      "skillFolderHash": "afb08e325b5163c8da3401ab3e2f075ce0aca124",
+      "installedAt": "2026-04-25T09:32:52.025Z",
+      "updatedAt": "2026-04-25T09:32:52.025Z"
+    },
+    "pdftomd": {
+      "source": "EATSTEAK/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/EATSTEAK/skills.git",
+      "skillPath": "skills/pdftomd/SKILL.md",
+      "skillFolderHash": "c9263c20f847e0cb03290f74cf524994866b0b78",
+      "installedAt": "2026-04-25T09:32:52.411Z",
+      "updatedAt": "2026-04-25T09:32:52.411Z"
+    },
+    "pr": {
+      "source": "EATSTEAK/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/EATSTEAK/skills.git",
+      "skillPath": "skills/pr/SKILL.md",
+      "skillFolderHash": "50bc491926ef36271c9076b04deea797ba4640f4",
+      "installedAt": "2026-04-25T09:32:52.797Z",
+      "updatedAt": "2026-04-25T09:32:52.797Z"
+    },
+    "rearrange": {
+      "source": "EATSTEAK/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/EATSTEAK/skills.git",
+      "skillPath": "skills/rearrange/SKILL.md",
+      "skillFolderHash": "463718a66c683b55233152e8e06e613d46fc95cc",
+      "installedAt": "2026-04-25T09:32:53.206Z",
+      "updatedAt": "2026-04-25T09:32:53.206Z"
+    },
+    "review": {
+      "source": "EATSTEAK/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/EATSTEAK/skills.git",
+      "skillPath": "skills/review/SKILL.md",
+      "skillFolderHash": "6d2255d6f633fc5789ddb6855f08ac535c3579ee",
+      "installedAt": "2026-04-25T09:32:53.594Z",
+      "updatedAt": "2026-04-25T09:32:53.594Z"
+    },
+    "summary": {
+      "source": "EATSTEAK/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/EATSTEAK/skills.git",
+      "skillPath": "skills/summary/SKILL.md",
+      "skillFolderHash": "b47a56c609f9dc8f6a9410fc566d6efa6c5e4bbc",
+      "installedAt": "2026-04-25T09:32:54.000Z",
+      "updatedAt": "2026-04-25T09:32:54.000Z"
     }
   },
   "dismissed": {

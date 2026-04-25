@@ -6,11 +6,8 @@ BACKUP_DIR="$AGENTS_DIR/.backups/$(date +%Y%m%d_%H%M%S)"
 
 # 심볼릭 링크 정의: "링크경로|대상경로"
 LINKS=(
-  "$HOME/.claude/commands|$AGENTS_DIR/commands"
-  "$HOME/.roo/commands|$AGENTS_DIR/commands"
   "$HOME/.roo/skills|$AGENTS_DIR/skills"
   "$HOME/.claude/skills|$AGENTS_DIR/skills"
-  "$HOME/.config/opencode/commands|$AGENTS_DIR/commands"
   "$HOME/.config/opencode/skills|$AGENTS_DIR/skills"
   "$HOME/.config/opencode/opencode.json|$AGENTS_DIR/.opencode/opencode.json"
   "$HOME/.claude/settings.json|$AGENTS_DIR/.claude/settings.json"

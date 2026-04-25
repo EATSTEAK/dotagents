@@ -14,7 +14,14 @@
     "pr": ""
   },
   "permissions": {
-    "allow": ["Bash(cargo fmt:*)", "Bash(cargo clippy:*)", "mcp__pencil"]
+    "allow": [
+      "Bash(cargo fmt:*)",
+      "Bash(cargo clippy:*)",
+      "Bash(pnpm *)",
+      "Bash(uv *)",
+      "Bash(pipx *)",
+      "mcp__pencil"
+    ]
   },
   "model": "opus[1m]",
   "statusLine": {
@@ -35,7 +42,13 @@
     "filesystem": {
       "allowWrite": [
         "/Users/koohyomin/.agents/.claude/.pnpm-store/v10",
-        "/Users/koohyomin/.cache/uv"
+        "/Users/koohyomin/.cache/uv",
+        "/Users/koohyomin/.local/share/uv",
+        "/Users/koohyomin/.local/share/pipx",
+        "/Users/koohyomin/.local/bin",
+        "/Users/koohyomin/.cache/pipx",
+        "/Users/koohyomin/Library/Caches/pipx",
+        "/Users/koohyomin/Library/Application Support/pipx"
       ],
       "allowRead": ["/Users/koohyomin/.gnupg"]
     },

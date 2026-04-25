@@ -13,6 +13,7 @@ LINKS=(
   "$HOME/.claude/settings.json|$AGENTS_DIR/.claude/settings.json"
   "$HOME/.claude/statusline-command.sh|$AGENTS_DIR/.claude/statusline-command.sh"
   "$HOME/.roo/rules|$AGENTS_DIR/.roo/rules"
+  "$HOME/.hermes/config.yaml|$AGENTS_DIR/hermes/config.yaml"
 )
 
 backup_item() {

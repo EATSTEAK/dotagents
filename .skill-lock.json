@@ -6,18 +6,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/vercel-labs/skills.git",
       "skillPath": "skills/find-skills/SKILL.md",
-      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "skillFolderHash": "3013fdeb8a11b10b1eb795ec3ae8bfca38f7c26d",
       "installedAt": "2026-02-15T16:36:06.434Z",
-      "updatedAt": "2026-02-15T16:36:06.434Z"
+      "updatedAt": "2026-04-24T01:53:10.152Z"
     },
     "docx": {
       "source": "anthropics/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "skillPath": "skills/docx/SKILL.md",
-      "skillFolderHash": "f205dbd3e057dccac222685f76e3b410e34bc2f8",
+      "skillFolderHash": "a0d216202f9793a78da44cf96aabe48f42e627ac",
       "installedAt": "2026-02-15T16:37:51.959Z",
-      "updatedAt": "2026-02-15T16:37:51.959Z"
+      "updatedAt": "2026-04-24T01:53:15.035Z"
     },
     "frontend-design": {
       "source": "anthropics/skills",
@@ -33,9 +33,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "skillPath": "skills/mcp-builder/SKILL.md",
-      "skillFolderHash": "9173e2c2107aac82d4ca6c726d71e89d11760470",
+      "skillFolderHash": "b866bcfb57b780c10b587c7b543e871a91661ce0",
       "installedAt": "2026-02-15T16:37:52.008Z",
-      "updatedAt": "2026-02-15T16:37:52.008Z"
+      "updatedAt": "2026-04-24T01:53:18.736Z"
     },
     "pdf": {
       "source": "anthropics/skills",
@@ -60,27 +60,27 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "skillPath": "skills/skill-creator/SKILL.md",
-      "skillFolderHash": "a01fbe3fa7f17f64173bd4fdcfecea86a3fd664c",
+      "skillFolderHash": "3cf9a8db32597ba3e24b584a3d696f4e11c7d7b6",
       "installedAt": "2026-02-15T16:37:52.081Z",
-      "updatedAt": "2026-02-15T16:37:52.081Z"
+      "updatedAt": "2026-04-24T01:53:22.354Z"
     },
     "web-artifacts-builder": {
       "source": "anthropics/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "skillPath": "skills/web-artifacts-builder/SKILL.md",
-      "skillFolderHash": "9ecbeae7c17caa478c5b753ba1bd258688075b5f",
+      "skillFolderHash": "821b94f16c123d5f12e4e72eda9f7a162e2698f6",
       "installedAt": "2026-02-15T16:37:52.105Z",
-      "updatedAt": "2026-02-15T16:37:52.105Z"
+      "updatedAt": "2026-04-24T01:53:26.292Z"
     },
     "webapp-testing": {
       "source": "anthropics/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "skillPath": "skills/webapp-testing/SKILL.md",
-      "skillFolderHash": "74cb751576f9e9af2aedff47e67861ef26db2dc4",
+      "skillFolderHash": "5ffb7dc66b9fd4c25c3e400a4c00da99a349b714",
       "installedAt": "2026-02-15T16:37:52.130Z",
-      "updatedAt": "2026-02-15T16:37:52.130Z"
+      "updatedAt": "2026-04-24T01:53:30.455Z"
     },
     "xlsx": {
       "source": "anthropics/skills",
@@ -96,18 +96,18 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/cloudflare/skills.git",
       "skillPath": "skills/cloudflare/SKILL.md",
-      "skillFolderHash": "bc05e15b7e8215cdeaa288e0d2744323eeb5fd05",
+      "skillFolderHash": "36e1f55db14dafc8acfece9d2f0fc69973b1f843",
       "installedAt": "2026-03-23T21:15:21.170Z",
-      "updatedAt": "2026-03-23T21:15:21.170Z"
+      "updatedAt": "2026-04-24T01:53:33.871Z"
     },
     "wrangler": {
       "source": "cloudflare/skills",
       "sourceType": "github",
       "sourceUrl": "https://github.com/cloudflare/skills.git",
       "skillPath": "skills/wrangler/SKILL.md",
-      "skillFolderHash": "14e1631a53c066784caa8bbdd70d94d95c40101a",
+      "skillFolderHash": "45cc198b2aad3f06e8abf91333f55fbe7579f659",
       "installedAt": "2026-03-23T21:15:21.805Z",
-      "updatedAt": "2026-03-23T21:15:21.805Z"
+      "updatedAt": "2026-04-24T01:53:36.614Z"
     },
     "workers-best-practices": {
       "source": "cloudflare/skills",
@@ -123,9 +123,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/cloudflare/skills.git",
       "skillPath": "skills/web-perf/SKILL.md",
-      "skillFolderHash": "fe238b54421680dc84b3fad7968cd8e916cb2b8b",
+      "skillFolderHash": "e8e8c50ca6abf0849a4d9d69c1bed8b98b5d7411",
       "installedAt": "2026-03-23T21:15:22.772Z",
-      "updatedAt": "2026-03-23T21:15:22.772Z"
+      "updatedAt": "2026-04-24T01:53:39.243Z"
     },
     "durable-objects": {
       "source": "cloudflare/skills",

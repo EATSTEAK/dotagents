@@ -234,6 +234,15 @@
       "skillFolderHash": "b47a56c609f9dc8f6a9410fc566d6efa6c5e4bbc",
       "installedAt": "2026-04-25T09:32:54.000Z",
       "updatedAt": "2026-04-25T09:32:54.000Z"
+    },
+    "superlearn": {
+      "source": "eatsteak/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/eatsteak/skills.git",
+      "skillPath": "skills/superlearn/SKILL.md",
+      "skillFolderHash": "30f89480a3d0bb40105b9070f1b8bfbe0575bee0",
+      "installedAt": "2026-04-29T19:07:42.279Z",
+      "updatedAt": "2026-04-29T19:07:42.279Z"
     }
   },
   "dismissed": {
@@ -246,6 +255,7 @@
     "codex",
     "cursor",
     "deepagents",
+    "dexto",
     "firebender",
     "gemini-cli",
     "github-copilot",

@@ -48,9 +48,17 @@
         "/Users/koohyomin/.local/bin",
         "/Users/koohyomin/.cache/pipx",
         "/Users/koohyomin/Library/Caches/pipx",
-        "/Users/koohyomin/Library/Application Support/pipx"
+        "/Users/koohyomin/Library/Application Support/pipx",
+        "/Users/koohyomin/.gnupg"
       ],
       "allowRead": ["/Users/koohyomin/.gnupg"]
+    },
+    "network": {
+      "allowUnixSockets": [
+        "/Users/koohyomin/.gnupg/S.gpg-agent",
+        "/Users/koohyomin/.gnupg/S.gpg-agent.*",
+        "/Users/koohyomin/.gnupg/S.keyboxd"
+      ]
     },
     "enableWeakerNetworkIsolation": true
   },

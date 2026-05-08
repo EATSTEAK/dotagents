@@ -33,12 +33,20 @@
     "frontend-design@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
     "rust-analyzer-lsp@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true
+    "typescript-lsp@claude-plugins-official": true,
+    "figma@claude-plugins-official": true
   },
   "language": "Korean",
   "sandbox": {
     "enabled": true,
     "autoAllowBashIfSandboxed": true,
+    "network": {
+      "allowUnixSockets": [
+        "/Users/koohyomin/.gnupg/S.gpg-agent",
+        "/Users/koohyomin/.gnupg/S.gpg-agent.*",
+        "/Users/koohyomin/.gnupg/S.keyboxd"
+      ]
+    },
     "filesystem": {
       "allowWrite": [
         "/Users/koohyomin/.agents/.claude/.pnpm-store/v10",
@@ -51,13 +59,8 @@
         "/Users/koohyomin/Library/Application Support/pipx",
         "/Users/koohyomin/.gnupg"
       ],
-      "allowRead": ["/Users/koohyomin/.gnupg"]
-    },
-    "network": {
-      "allowUnixSockets": [
-        "/Users/koohyomin/.gnupg/S.gpg-agent",
-        "/Users/koohyomin/.gnupg/S.gpg-agent.*",
-        "/Users/koohyomin/.gnupg/S.keyboxd"
+      "allowRead": [
+        "/Users/koohyomin/.gnupg"
       ]
     },
     "enableWeakerNetworkIsolation": true

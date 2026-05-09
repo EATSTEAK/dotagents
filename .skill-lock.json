@@ -293,6 +293,15 @@
       "pluginName": "mattpocock-skills",
       "installedAt": "2026-05-08T02:42:27.350Z",
       "updatedAt": "2026-05-08T02:42:27.350Z"
+    },
+    "use-pnpm": {
+      "source": "eatsteak/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/eatsteak/skills.git",
+      "skillPath": "skills/use-pnpm/SKILL.md",
+      "skillFolderHash": "2d1e9f98de21677ef32ea1bd205b65e6d1ca4f59",
+      "installedAt": "2026-05-08T02:49:50.798Z",
+      "updatedAt": "2026-05-08T02:49:50.798Z"
     }
   },
   "dismissed": {

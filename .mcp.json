@@ -42,6 +42,12 @@
     "arxiv-mcp": {
       "command": "uvx",
       "args": ["arxiv-mcp-server", "--storage-path", "~/.arxiv"]
+    },
+    "pencil": {
+      "transport": "stdio",
+      "command": "/Applications/Pencil.app/Contents/Resources/app.asar.unpacked/out/mcp-server-darwin-arm64",
+      "args": ["--app", "desktop"],
+      "env": {}
     }
   }
 }

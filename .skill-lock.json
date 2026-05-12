@@ -302,6 +302,78 @@
       "skillFolderHash": "2d1e9f98de21677ef32ea1bd205b65e6d1ca4f59",
       "installedAt": "2026-05-08T02:49:50.798Z",
       "updatedAt": "2026-05-08T02:49:50.798Z"
+    },
+    "design-md": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google-labs-code/stitch-skills.git",
+      "skillPath": "skills/design-md/SKILL.md",
+      "skillFolderHash": "0a84781f35accede7cf373a4129d93bfb7651930",
+      "installedAt": "2026-05-12T07:46:15.006Z",
+      "updatedAt": "2026-05-12T07:46:15.006Z"
+    },
+    "enhance-prompt": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google-labs-code/stitch-skills.git",
+      "skillPath": "skills/enhance-prompt/SKILL.md",
+      "skillFolderHash": "ee608061b9209907f5f296670483884c5eb20827",
+      "installedAt": "2026-05-12T07:46:15.011Z",
+      "updatedAt": "2026-05-12T07:46:15.011Z"
+    },
+    "react:components": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google-labs-code/stitch-skills.git",
+      "skillPath": "skills/react-components/SKILL.md",
+      "skillFolderHash": "c201fcfad2b656a7e4276bd2a4d10611a79321f8",
+      "installedAt": "2026-05-12T07:46:15.012Z",
+      "updatedAt": "2026-05-12T07:46:15.012Z"
+    },
+    "remotion": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google-labs-code/stitch-skills.git",
+      "skillPath": "skills/remotion/SKILL.md",
+      "skillFolderHash": "ff9c6b50c98e38fa3d46560391b16894731d3bc3",
+      "installedAt": "2026-05-12T07:46:15.013Z",
+      "updatedAt": "2026-05-12T07:46:15.013Z"
+    },
+    "shadcn-ui": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google-labs-code/stitch-skills.git",
+      "skillPath": "skills/shadcn-ui/SKILL.md",
+      "skillFolderHash": "def8b780a6f3857ca964d1a02c144ef6f86fb21c",
+      "installedAt": "2026-05-12T07:46:15.014Z",
+      "updatedAt": "2026-05-12T07:46:15.014Z"
+    },
+    "stitch-design": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google-labs-code/stitch-skills.git",
+      "skillPath": "skills/stitch-design/SKILL.md",
+      "skillFolderHash": "824aa2fe9eed4b4dfc9a855b54ef35b59fe36be1",
+      "installedAt": "2026-05-12T07:46:15.015Z",
+      "updatedAt": "2026-05-12T07:46:15.015Z"
+    },
+    "stitch-loop": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google-labs-code/stitch-skills.git",
+      "skillPath": "skills/stitch-loop/SKILL.md",
+      "skillFolderHash": "439a760b3c37eaa925fa994728f05b7618d99f8c",
+      "installedAt": "2026-05-12T07:46:15.015Z",
+      "updatedAt": "2026-05-12T07:46:15.015Z"
+    },
+    "taste-design": {
+      "source": "google-labs-code/stitch-skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/google-labs-code/stitch-skills.git",
+      "skillPath": "skills/taste-design/SKILL.md",
+      "skillFolderHash": "9b0d4827e32e8688348fa131a4aedcb9ac34ff0d",
+      "installedAt": "2026-05-12T07:46:15.015Z",
+      "updatedAt": "2026-05-12T07:46:15.015Z"
     }
   },
   "dismissed": {

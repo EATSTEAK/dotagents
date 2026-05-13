@@ -24,9 +24,8 @@ Roo Code, Claude Code, OpenCode는 각각 `~/.roo/`, `~/.claude/`, `~/.config/op
 
 ### 요구 사항
 
-- macOS / Linux
-- Git
-- Bash 4+
+- macOS / Linux: Git, Bash 4+
+- Windows: Git, Nushell 0.103+ 및 심볼릭 링크 생성 권한(개발자 모드 또는 관리자 권한)
 
 ### 설치
 
@@ -34,11 +33,16 @@ Roo Code, Claude Code, OpenCode는 각각 `~/.roo/`, `~/.claude/`, `~/.config/op
 # 1. 저장소 클론
 git clone <repo-url> ~/.agents
 
-# 2. 심볼릭 링크 설정
+# 2. macOS / Linux 심볼릭 링크 설정
 ~/.agents/setup.sh
 ```
 
-`setup.sh`는 기존 파일이 있으면 `.backups/` 디렉토리에 타임스탬프와 함께 자동 백업한 뒤 심볼릭 링크를 생성합니다. 이미 올바른 링크가 존재하면 스킵합니다.
+```nu
+# Windows / Nushell 심볼릭 링크 설정
+nu ~/.agents/setup.nu
+```
+
+`setup.sh`와 `setup.nu`는 기존 파일이 있으면 `.backups/` 디렉토리에 타임스탬프와 함께 자동 백업한 뒤 심볼릭 링크를 생성합니다. 이미 올바른 링크가 존재하면 스킵합니다.
 
 ### 설정 확인
 
@@ -52,7 +56,8 @@ ls -la ~/.hermes/config.yaml # → ~/.agents/hermes/config.yaml
 
 ```
 .agents/
-├── setup.sh                          # 심볼릭 링크 설정 스크립트
+├── setup.sh                          # macOS / Linux 심볼릭 링크 설정 스크립트
+├── setup.nu                          # Windows / Nushell 심볼릭 링크 설정 스크립트
 ├── skills/                           # 에이전트 스킬
 │   ├── commit/                       #   staged 변경사항 스마트 커밋
 │   ├── pr/                           #   GitHub PR 생성
@@ -71,7 +76,7 @@ ls -la ~/.hermes/config.yaml # → ~/.agents/hermes/config.yaml
 │       └── rules.md                  #   글로벌 규칙 (pnpm 강제 등)
 ├── hermes/                           # Hermes Agent 설정
 │   └── config.yaml                   #   ~/.hermes/config.yaml 원본
-├── .backups/                         # setup.sh에 의한 자동 백업 (gitignored)
+├── .backups/                         # setup 스크립트에 의한 자동 백업 (gitignored)
 └── .gitignore
 ```
 
@@ -106,10 +111,14 @@ ls -la ~/.hermes/config.yaml # → ~/.agents/hermes/config.yaml
 
 - **패키지 매니저**: `npm`, `yarn` 대신 항상 `pnpm` 사용 (`npx` → `pnpx`)
 
-## setup.sh 동작 방식
+## setup 스크립트 동작 방식
 
 ```bash
 ~/.agents/setup.sh
+```
+
+```nu
+nu ~/.agents/setup.nu
 ```
 
 1. **백업**: 기존 파일/심볼릭 링크가 있으면 `.backups/<타임스탬프>/` 에 복사
